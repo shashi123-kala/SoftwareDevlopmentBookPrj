@@ -2,8 +2,10 @@ package com.sdb.tdd;
 
 public class CalculateDiscount {
 
+	public static final int priceForOneBook = 50;
+
 	public double getTotalPrice() {
-		double amtAfterDis = 50.00;
+		int amtAfterDis = priceForOneBook;
 		return amtAfterDis;
 	}
 
