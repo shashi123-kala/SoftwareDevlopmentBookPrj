@@ -32,7 +32,6 @@ public class CalculateDiscountTest {
 
 	@Test
 	public void buyingOneBook() {
-		CalculateDiscount calculateDiscount = new CalculateDiscount();
 		SoftwareDevelopmentBook sdbFirstI = SoftwareDevlopmentBookList.GivenASoftwareDevelopmentIBook();
 		assertEquals(50.0, calculateDiscount.getTotalPrice());
 	}
