@@ -35,7 +35,17 @@ public class CalculateDiscount {
 			amtAfterDis = 50.00;
 			return amtAfterDis;
 		} else {
-			List<SoftwareDevelopmentBookSet> setsOfDifferentBooks = getBestCombinationBooksSets(sdbQtySet);
+			return getAmtAfterDiscount();
+		}
+		
+		
+
+	
+	}
+	
+	private double getAmtAfterDiscount() {
+		  double amtAfterDis = 0.00;
+		  List<SoftwareDevelopmentBookSet> setsOfDifferentBooks = getBestCombinationBooksSets(sdbQtySet);
 			double setPrice = 0.0;
 			for (SoftwareDevelopmentBookSet booksSet : setsOfDifferentBooks) {
 				for (SoftwareDevelopmentBook book : booksSet.getBooks()) {
@@ -45,14 +55,8 @@ public class CalculateDiscount {
 				amtAfterDis += setPrice;
 				setPrice = 0;
 			}
-			return amtAfterDis;
-		}
-		
-		
-
-	
+		  return amtAfterDis;
 	}
-	
 	
 	private List<SoftwareDevelopmentBookSet> getBestCombinationBooksSets(
 			List<SoftwareDevlopmentBookSetQty> bookSetQty) {
